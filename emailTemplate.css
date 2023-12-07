@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    /* border: 1px solid red; */
+}
+
+.banner{
+    background-color: #ff4848;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    margin-top: 1rem;
+}
+.logo-text{
+    color: white;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+.contents{
+    margin-top: .5rem;
+    padding: 20px;
+    max-width: 100%;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.header{
+    margin-bottom: 1rem;
+    align-self: center;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.contents p{
+    line-height: 2.3rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+footer{
+    margin-top: 1rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.buttons button{
+    padding: 10px 30px;
+    margin: 30px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: .2px solid;
+    background-color: #ff4848;
+    color: white;
+}
+.buttons :nth-child(2){
+    margin-left: 8px;
+    background-color: black;
+    color: white;
+}
+.playstore{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+.appstore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.social-links{
+    display: flex;
+    padding-left: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+footer .loc{
+    margin-top: 1rem;
+    color: black;
+}
+.contact-links{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.contact-links a{
+    padding: 0px 15px;
+    color: black;
+    text-decoration: underline;
+}
+/* @media  (max-width:844px){
+    *{
+        width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .contents{
+        width: 100%;
+    }
+    .contents .header{
+        width: 100%;
+    }
+    .contents p{
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+} */
