@@ -4,20 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bedmate || Career Page</title>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../dist/output.css" />
     <link
       rel="shortcut icon"
       href="../Assets/BED-MATE.png"
       type="image/x-icon"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800&display=swap"
       rel="stylesheet"
     />
+    <style>
+      @media  (max-width:992px){
+        .card{
+          width: 15rem;
+        }
+        .row{
+          display: flexbox;
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
 
   <body class="contact career-page bg-mainThemeColor overflow-x-hidden">
@@ -88,26 +103,28 @@
       <nav
         class="nav bg-mainPink flex items-center justify-between lg:py-5 py-3 px-8 rounded-full"
       >
-      <div style="display: flex; justify-content: center; align-items: center;">
-        <img
-      src="../Assets/Heart.png"
-      alt="bed-mate-logo"
-      style="height: 3.3rem; padding: 0 .6rem;"
-    />
-    <img
-      src="../Assets/cumrid.png"
-      alt="bed-mate-logo"
-      style="height: 1.3rem"
-    />
-      </div>
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            src="../Assets/Heart.png"
+            alt="bed-mate-logo"
+            style="height: 3.3rem; padding: 0 0.6rem"
+          />
+          <img
+            src="../Assets/cumrid.png"
+            alt="bed-mate-logo"
+            style="height: 1.3rem"
+          />
+        </div>
 
         <div class="nav-list">
           <ul class="flex items-center gap-10 text-fadeWhite">
-            <li class="nav-link"><a href="index.html">HOME</a></li>
-            <li class="nav-link"><a href="goal.html">GOAL</a></li>
-            <li class="nav-link"><a href="career-page.html">JOIN US</a></li>
-            <li class="nav-link"><a href="contact.html">CONTACT US</a></li>
-            <li class="nav-link"><a href="pricing.html">PRICING</a></li>
+            <li class="nav-link"><a href="index.html" style="color: white;">HOME</a></li>
+            <li class="nav-link"><a href="goal.html" style="color: white;">GOAL</a></li>
+            <li class="nav-link"><a href="career-page.html" style="color: white;">JOIN US</a></li>
+            <li class="nav-link"><a href="contact.html" style="color: white;">CONTACT US</a></li>
+            <li class="nav-link"><a href="pricing.html" style="color: white;">PRICING</a></li>
           </ul>
         </div>
 
@@ -244,7 +261,7 @@
 
           <div>
             <div
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer border-2 hover:bg-[#F5C8C4] hover:border-[#FFF]"
+              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">Wordpress Developer</p>
@@ -263,7 +280,7 @@
             </div>
 
             <div
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer border-2 hover:bg-[#F5C8C4] hover:border-[#FFF]"
+              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">Javascript</p>
@@ -282,7 +299,7 @@
             </div>
 
             <div
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer border-2 hover:bg-[#F5C8C4] hover:border-[#FFF]"
+              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">Apps Developer</p>
@@ -301,7 +318,7 @@
             </div>
 
             <div
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer border-2 hover:bg-[#F5C8C4] hover:border-[#FFF]"
+              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">IOS Developer</p>
@@ -320,7 +337,7 @@
             </div>
 
             <div
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer border-2 hover:bg-[#F5C8C4] hover:border-[#FFF]"
+              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">Node JS Developer</p>
@@ -342,78 +359,89 @@
       </div>
     </div>
 
-    <div class="">
-      <form
-        action=""
-        class="w-[60%] bg-[#E21F4E] mx-auto p-10 flex flex-col gap-10"
+    <div class="container-fluid my-lg-5" style="width: 60%">
+      <div
+        class="card p-lg-5"
+        style="background-color: #e21f4e; margin-bottom: 4rem;"
       >
-        <div class="flex items-start gap-10">
-          <div class="w-1/2 flex flex-col gap-5">
-            <div class="w-full">
-              <label class="text-[#fff] text-lg font-bold capitalize" for="name"
+        <form action="">
+          <div class="row" style="padding: 1rem 0;">
+            <div class="col">
+              <label
+                for=""
+                style="
+                  padding: 0.7rem 0;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  color: white;
+                "
                 >your name*</label
               >
-              <input
-                class="w-full py-2 px-5"
-                type="text"
-                name="name"
-                id="name"
-              />
+              <input type="text" class="form-control" aria-label="Name" style="height: 3.3rem; background-color: white; opacity: 10%; color: black;"/>
             </div>
-
-            <div class="w-full">
+            <div class="col">
               <label
-                class="text-[#fff] text-lg font-bold capitalize"
-                for="phone_number"
+                for=""
+                style="
+                  padding: 0.7rem 0;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  color: white;
+                "
+                >Email*</label
+              >
+              <input type="email" class="form-control" aria-label="Email" style="height: 3.3rem; background-color: white; opacity: 10%; color: black;" />
+            </div>
+          </div>
+          <div class="row" style="padding: 1rem 0">
+            <div class="col">
+              <label
+                for=""
+                style="
+                  padding: 0.7rem 0;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  color: white;
+                "
                 >Phone number*</label
               >
               <input
-                class="w-full py-2 px-5"
                 type="tel"
-                name="phone_number"
-                id="phone_number"
+                class="form-control"
+                aria-label="Phone number"
+                style="height: 3.3rem; background-color: white; opacity: 10%; color: black;"
               />
             </div>
-          </div>
-
-          <div class="w-1/2 flex flex-col gap-5">
-            <div class="w-full">
+            <div class="col">
               <label
-                class="text-[#fff] text-lg font-bold capitalize"
-                for="email"
-                >Email*</label
-              >
-              <input
-                class="w-full py-2 px-5"
-                type="text"
-                name="email"
-                id="email"
-              />
-            </div>
-
-            <div class="w-full">
-              <label class="text-[#fff] text-lg font-bold capitalize" for="cv"
+                for="file-upload"
+                style="
+                  padding: 0.7rem 0;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  color: white;
+                "
                 >Upload Cv*</label
               >
-              <input
-                class="w-full py-2 px-5 bg-[#fff]"
-                type="file"
-                name="cv"
-                id="cv"
-              />
+              <input type="file" class="form-control py-3 px-1" id="file-upload" style="height: 3.3rem; background-color: white; opacity: 80%; color: black;"/>
             </div>
           </div>
-        </div>
-
-        <div>
-          <label for="about" class="text-[#fff] text-lg font-bold capitalize"
-            >Tell us about yourself</label
-          >
-          <textarea name="" id="" rows="8" class="w-full"></textarea>
-        </div>
-      </form>
+          <div class="col">
+            <label
+              for=""
+              style="
+                padding: 0.7rem 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white;
+              "
+              >Tell us about yourself</label
+            >
+            <textarea name="" id="" rows="8" class="form-control" style="background-color: white; opacity: 10%; color: black;"></textarea>
+          </div>
+        </form>
+      </div>
     </div>
-
     <footer class="footer bg-[#E21F4ECC] lg:px-32 lg:py-20 px-5 pt-10 pb-3">
       <div class="footer-wrap">
         <div
