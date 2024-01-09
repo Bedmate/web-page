@@ -79,3 +79,53 @@ if (document.querySelector(".career-page")) {
   const stackCont = document.querySelectorAll(".state");
   console.log(stackCont);
 }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm2").style.display = "none";
+  document.getElementById("myForm3").style.display = "none";
+  document.getElementById("myForm4").style.display = "none";
+  document.getElementById("myForm5").style.display = "none";
+}
+function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm3").style.display = "none";
+  document.getElementById("myForm4").style.display = "none";
+  document.getElementById("myForm5").style.display = "none";
+}
+function openForm3() {
+  document.getElementById("myForm3").style.display = "block";
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm2").style.display = "none";
+  document.getElementById("myForm4").style.display = "none";
+  document.getElementById("myForm5").style.display = "none";
+}
+function openForm4() {
+  document.getElementById("myForm4").style.display = "block";
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm2").style.display = "none";
+  document.getElementById("myForm3").style.display = "none";
+  document.getElementById("myForm5").style.display = "none";
+}
+function openForm5() {
+  document.getElementById("myForm5").style.display = "block";
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm2").style.display = "none";
+  document.getElementById("myForm3").style.display = "none";
+  document.getElementById("myForm4").style.display = "none";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
+}
+function closeForm3() {
+  document.getElementById("myForm3").style.display = "none";
+}
+function closeForm4() {
+  document.getElementById("myForm4").style.display = "none";
+}
+function closeForm5() {
+  document.getElementById("myForm5").style.display = "none";
+}
