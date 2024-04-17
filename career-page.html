@@ -29,12 +29,32 @@
       }
       @media (max-width: 992px) {
         .card {
+          margin: 2rem;
           padding: 0 1rem;
-          width: 24rem;
+          width: 20rem;
         }
         .row {
           display: flexbox;
           flex-direction: column;
+        }
+        .card label{
+          font-size: smaller;
+        }
+        .col input{
+          height: 1rem;
+        }
+        .but{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+        .but p{
+          font-size: smaller;
+          padding: 0 .5rem;
+        }
+        .but img{
+          height: 10px;
         }
       }
     </style>
@@ -278,7 +298,7 @@
             <div class="dropdown">
               <button
               onclick="openForm()"
-              class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
+              class="but stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
             >
               <div class="w-[35%]">
                 <p class="text-[#001833] text-xl">Wordpress Developer</p>
@@ -305,7 +325,7 @@
                 style="background-color: #e21f4e; margin-bottom: 4rem"
               >
                 <form action="">
-                  <div style="display: flex; justify-content: end">
+                  <div style="display: flex; justify-content: end; padding: 1rem;">
                     <button
                       onclick="closeForm()"
                       style="
@@ -473,7 +493,7 @@
             <div class="dropdown">
               <button
                 onclick="openForm2()"
-                class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
+                class="but stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
               >
                 <div class="w-[35%]">
                   <p class="text-[#001833] text-xl">Javascript</p>
@@ -667,7 +687,7 @@
             <div class="dropdown">
               <button
                 onclick="openForm3()"
-                class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
+                class="but stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
               >
                 <div class="w-[35%]">
                   <p class="text-[#001833] text-xl">Apps Developer</p>
@@ -860,7 +880,7 @@
             </div>
             <div class="dropdown">
               <button
-                class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
+                class="but stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
                 onclick="openForm4()"
               >
                 <div class="w-[35%]">
@@ -1055,7 +1075,7 @@
             <div class="dropdown">
               <button
                 onclick="openForm5()"
-                class="stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
+                class="but stack w-full bg-[#F2DFDD] flex items-center justify-between px-5 py-2 mt-5 cursor-pointer"
               >
                 <div class="w-[35%]">
                   <p class="text-[#001833] text-xl">Node JS Developer</p>
