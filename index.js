@@ -15,6 +15,116 @@ console.log(accBtns);
 const accBodys = document.querySelectorAll(".accordian-body");
 console.log(accBodys);
 
+
+// teams Image and position and slider
+const allTeamsImage = document.querySelectorAll(".imageContainer")
+const all_position = document.querySelectorAll(".all_position")
+const prevBtn = document.querySelector(".prev_pos")
+const nextBtn = document.querySelector(".next_pos")
+const team_mobile = document.querySelectorAll(".mobile_team_members")
+
+let position = 1
+
+allTeamsImage.forEach((imgContainer, i) => {
+    
+  if(i === position){
+    imgContainer.classList.add("currentSelectedTeam")
+  }else{
+    imgContainer.classList.remove("currentSelectedTeam")
+  }
+
+})
+
+team_mobile.forEach((pos, i) => {
+  pos.style.transform = `translateX(${i}00%)`
+})
+
+
+
+all_position.forEach((pos, i) => {
+    
+  if(i === position){
+    pos.classList.add("curPos")
+  }
+
+})
+
+
+function sliderFxn(){
+
+  team_mobile.forEach((pos, i) => {
+    pos.style.transform = `translateX(${100 * (i -position)}%)`
+  })
+
+
+
+
+allTeamsImage.forEach((imgContainer, i) => {
+
+  if(i === position){
+    imgContainer.classList.add("currentSelectedTeam")
+  }else{
+    imgContainer.classList.remove("currentSelectedTeam")
+  }
+
+})
+
+all_position.forEach((pos, i) => {
+
+if(i === position){
+  pos.classList.add("curPos")
+}else{
+  pos.classList.remove("curPos")
+}
+
+})
+
+}
+
+
+
+prevBtn.addEventListener("click", function(){
+
+   
+    position--
+
+    
+
+    if(position < 0){
+      position = allTeamsImage.length - 1
+      position = team_mobile.length - 1
+
+    } 
+
+    sliderFxn()
+
+  })
+
+
+
+  nextBtn.addEventListener("click", function(){
+
+    position++
+    
+ 
+
+    if(position > (allTeamsImage.length - 1)){
+        position = 0
+        
+
+      } 
+  
+      sliderFxn()
+  })
+
+  // ====================
+
+
+
+
+
+
+
 navToggle.addEventListener("click", () => {
   navMobile.classList.remove("hidden");
   pageWrap.classList.add("hidden");

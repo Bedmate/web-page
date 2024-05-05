@@ -26,7 +26,246 @@
       .form {
         display: none;
         position: relative;
+      }   
+   .nav{
+    z-index: 100;
+   }
+      .Join_our_Team{
+          width: 80%;
       }
+      .imageContainer{
+        width: 20%;
+        max-width: 280px;
+        min-width: 220px;
+        flex-shrink: 0;
+        height:250px;
+        margin: 0 .3rem;
+ 
+        
+        filter: grayscale(100%);
+        transition: all 1s;
+
+      }
+     
+      .imageContainer img{
+        height: 70%;
+        width: 100%;
+        object-fit: cover;      
+     
+
+      }
+      .deskTopTeam{
+        display: flex;
+      }
+      
+       .name_role{
+      display: none;
+
+      }
+      .name_role > a{
+        background-color: #e21f4e;
+        color: white;
+        border-radius: 50%;
+        padding: .3rem .5rem;
+        
+      }
+       
+      .currentSelectedTeam{
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 2px 26px 20px 1px #e21f4c37;
+        z-index: 50;
+     
+        margin: 0 .8rem;
+
+        width: 30%;
+
+      }
+     
+      .currentSelectedTeam > *{
+        transition: all 1s ;
+        display: flex;
+        z-index: inherit;
+        
+      }
+      .currentSelectedTeam img{
+        border-top-left-radius: .4rem;
+        border-top-right-radius: .4rem;
+      }
+
+      .currentTeamPosition{
+        display: flex; 
+        height: 30px;
+        width: 70%;
+        align-items: center;
+        margin: 2.7rem auto;
+      
+      }
+
+      .currentTeamPosition > span{
+        width: 25%;
+        height: 20%;
+        margin: .6rem;
+        border-radius: .8rem;
+      
+
+      }
+
+      .all_position{
+        background-color: white;
+      }
+      
+      .curPos{
+        background-color: #e21f4e;
+      }
+
+      .benefits{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 4rem auto;
+      }
+
+      .benefits div{
+        width: 48%;
+      }
+
+      .benefits img{
+        width: 50%;
+      }
+      .benefits  div p:first-of-type {
+        font-size: 35px;
+        margin: .5rem 0;
+        font-weight: 800;
+      }
+
+        .benefits  div p:nth-of-type(2) {
+          font-size: 25px;
+          font-weight: light;
+          margin: 1rem 0;
+
+        }
+
+        .benefits  div p:last-of-type{
+          color: rgb(92, 92, 92);
+          width: 100%;
+          margin: .8rem 0;
+        }
+
+        .benefits div p{
+          max-width: 80%;
+        }
+
+        .benefit_box{
+          display: flex;
+          padding: 1rem;
+
+        }
+
+        .benefit_box div{
+          width: 40%;
+          padding: 1.7rem 2rem;
+          height: 300px;
+          margin: 1rem;
+          border-radius: 2rem;
+          color: white;
+          font-size: .9rem;
+          align-items: center;
+          justify-content: center;
+          max-width: 380px;
+        }
+        .benefit_box div span {
+          margin: 1rem;
+          margin-top: 0;
+          padding: 1rem;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          height: 80px;
+          width: 80px;
+        }
+
+        .benefit_box div h2{
+          font-weight: bold;
+          margin: 1rem 0;
+        }
+
+        .team_mobile{
+          display: none;
+        }
+
+      
+      @media (max-width: 650px){
+            .Join_our_Team{
+          width: 100%;
+             }
+          .benefits{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+          }
+          .benefits div{
+              width: 100%;
+
+          }
+          .benefits p{
+            width: 90%;
+            margin: .7rem;
+          }
+          .benefits > img {
+            width: 85%;
+            margin: 2rem auto;
+          }
+          .benefit_box{
+            flex-direction: column;
+            margin: 2rem auto;
+          }
+          .benefit_box div{
+            width: 90%;
+            height: auto;
+
+          }
+
+          .deskTopTeam{
+            display: none;
+          }
+
+          .team_mobile{
+            display: flex;
+            overflow: hidden;
+            min-height: 280px;
+            position: relative;
+          }
+          .team_mobile > div{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            transition: all 1s;
+
+          }
+
+          .team_mobile >div img{
+            filter: grayscale(0);
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+
+          }
+
+      .name_role{
+      display: flex;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+
+      }
+
+      }
+
       @media (max-width: 992px) {
         .card {
           margin: 2rem;
@@ -126,7 +365,7 @@
 
     <div class="page-wrap lg:px-20 p-3 lg:py-5">
       <nav
-        class="nav bg-mainPink flex items-center justify-between lg:py-5 py-3 px-8 rounded-full"
+        class="nav bg-mainPink flex items-center justify-between lg:py-5 py-3 px-8 rounded-full "
       >
         <div
           style="display: flex; justify-content: center; align-items: center"
@@ -200,7 +439,7 @@
         </div>
       </nav>
 
-      <div class="my-16 px-3">
+      <div class="Join_our_Team my-16 px-3 md:w-[90%] mx-auto">
         <h2 class="text-3xl text-[#231D4F]">Join Our Team</h2>
         <p class="text-lg font-light text-[#000000] my-5">
           At CUMRID, we believe in the power of collective action. Our team
@@ -210,43 +449,199 @@
         </p>
       </div>
 
-      <div
-        class="lg:flex items-center justify-between grid grid-cols-2 gap-5 px-10 lg:px-0"
+      <div style="height: auto; position: relative;    max-width: auto; align-items: center;"
+        class="deskTopTeam mx-auto w-[90%]   items-center justify-center  "
       >
-        <div class="flex items-center justify-center">
+        <div class=" flex flex-col items-center justify-center imageContainer ">
           <img
             src="./Assets/3_4_image-0.webp.png"
             alt="team-imges"
-            class="w-[90%]"
+            class="w-[90%] teamsImage"
           />
+          <div class="name_role w-full bg-white flex items-center p-3 px-2 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   ">
+              ↗
+            </a>
+          </div>
         </div>
-        <div class="flex items-center justify-center">
+
+        <div class="flex flex-col items-center justify-center imageContainer ">
           <img
             src="./Assets/3_4_image-1.webp.png"
             alt="team-imges"
-            class="w-[90%]"
+            class="w-[90%] teamsImage"
           />
+          <div class="name_role w-full bg-white flex items-center p-3 px-2 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   bg-[#e21f4e]">
+              ↗
+            </a>
+          </div>
         </div>
-        <div class="flex items-center justify-center">
+
+        <div class="flex flex-col items-center justify-center imageContainer ">
           <img
             src="./Assets/3_4_image-2.webp.png"
             alt="team-imges"
-            class="w-[90%]"
+            class="w-[90%] teamsImage"
           />
+          <div class="name_role w-full bg-white flex items-center p-3 px-2 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   bg-[#e21f4e]">
+              ↗
+            </a>
+          </div>
         </div>
-        <div class="flex items-center justify-center">
+
+        <div class="flex flex-col items-center justify-center imageContainer ">
           <img
             src="./Assets/3_4_image-3.webp.png"
             alt="team-imges"
-            class="w-[90%]"
+            class="w-[90%] teamsImage"
           />
+          <div class="name_role w-full bg-white flex items-center p-3 px-2 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   bg-[#e21f4e]">
+              ↗
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="lg:flex items-center justify-between my-20">
-        <div class="lg:w-1/2">
-          <p class="text-[#231D4F] text-[40px]">Benefits</p>
-          <p class="text-[#231D4F] text-[40px]">
+
+      <div class="team_mobile   ">
+        
+<!--  -->
+        <div class=" flex flex-col items-center justify-center  mobile_team_members">
+          <img
+            src="./Assets/3_4_image-0.webp.png"
+            alt="team-imges"
+            class="w-[90%] teamsImage"
+          />
+          <div class="name_role w-full bg-white flex items-center p-3 px-4 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   ">
+              ↗
+            </a>
+          </div>
+
+
+
+        </div>
+        <!--  -->
+        
+<!--  -->
+        <div class=" flex flex-col items-center justify-center  mobile_team_members">
+          <img
+          src="./Assets/3_4_image-1.webp.png"
+          alt="team-imges"
+            class="w-[90%] teamsImage"
+          />
+          <div class="name_role w-full bg-white flex items-center p-3 px-4 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   ">
+              ↗
+            </a>
+          </div>
+
+
+
+        </div>
+        <!--  -->
+        
+<!--  -->
+        <div class=" flex flex-col items-center justify-center  mobile_team_members">
+          <img
+          src="./Assets/3_4_image-2.webp.png"
+          alt="team-imges"
+            class="w-[90%] teamsImage"
+          />
+          <div class="name_role w-full bg-white flex items-center p-3 px-4 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   ">
+              ↗
+            </a>
+          </div>
+
+
+
+        </div>
+        <!--  -->
+        
+<!--  -->
+        <div class=" flex flex-col items-center justify-center  mobile_team_members">
+          <img
+          src="./Assets/3_4_image-3.webp.png"
+          alt="team-imges"
+            class="w-[90%] teamsImage"
+          />
+          <div class="name_role w-full bg-white flex items-center p-3 px-4 justify-between ">
+            <div class="">
+              <h3 class="font-bold ">Shodeke Barry</h3>
+              <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
+            </div>
+
+            <a href="" class="   ">
+              ↗
+            </a>
+          </div>
+
+
+
+        </div>
+        <!--  -->
+
+      </div>
+
+    
+      <div class="d-flex justify-content-between mx-auto text-light w-75  align-items-center">
+
+        <button class="p-3 bg-dark rounded-circle prev_pos">←</button>
+        <div class="currentTeamPosition" >
+          <span class="all_position"></span>
+          <span class="all_position"></span>
+          <span class="all_position"></span>
+          <span class="all_position"></span>
+        </div>
+        <button class="p-3 bg-dark rounded-circle next_pos">→</button>
+
+      </div>
+
+      <!-- ======== -->
+
+      <div class="benefits lg:flex flex  mx-auto items-center justify-between    ">
+        <div class="">
+          <p class="">Benefits</p>
+          <p class="">
             Why you Should Join Our Awesome Team
           </p>
 
@@ -257,30 +652,36 @@
           </p>
         </div>
 
-        <div
-          class="lg:w-1/2 flex flex-col lg:flex-row items-center justify-between gap-5 lg:mt-0 mt-10"
-        >
-          <div class="lg:w-1/2">
-            <p class="font-bold text-lg text-[#001833]">Impactful Work:</p>
-            <p class="mt-5 text-sm text-[#000000]">
-              At CUMRID, you'll be part of initiatives that truly matter.
-              Whether it's supporting local causes, contributing to
-              environmental sustainability, or empowering underserved
-              communities, your efforts will create a lasting impact.
-            </p>
-          </div>
-          <div class="lg:w-1/2">
-            <p class="font-bold text-lg text-[#001833]">
-              Professional Development:
-            </p>
-            <p class="mt-5 text-sm text-[#000000]">
-              We value our team and are committed to your growth. You'll have
-              access to training, mentorship, and networking opportunities that
-              can enhance your skills and advance your career.
-            </p>
-          </div>
-        </div>
+        <img src="./Assets/benefitsImage.png" alt="" class="benefits_image">
       </div>
+
+      <div class="benefit_box my-10 flex p-3 w-full flex-wrap items-center justify-center">
+        <div class="bg-[#E21F4ECC] flex flex-col items-center justify-center">
+            <span>
+              <img src="./Assets/cumrid_heart_logo.png" alt="cumrid_heart_logo">
+            </span>
+            <h2>Impactful Work:</h2>
+            <p>
+              At CUMRID, you'll be part of initiatives that truly matter. Whether it's supporting local causes, contributing to environmental sustainability, or empowering underserved communities, your efforts will create a lasting impact.
+            </p>
+        </div>
+  
+        <div class="bg-[#E21F4ECC] flex flex-col items-center justify-center">
+          <span>
+            <img src="./Assets/cumrid_heart_logo.png" alt="cumrid_heart_logo">
+          </span>
+          <h2>Professional Development</h2>
+          <p>
+            We value our team and are committed to your growth. You'll have access to training, mentorship, and networking opportunities that can enhance your skills and advance your career.
+          </p>
+      </div>
+     </div>
+  
+     <!-- 
+  
+      span
+  
+      -->
 
       <div class="bg-[#F5C8C4] py-10">
         <div class="lg:w-[60%] mx-auto">
@@ -1270,6 +1671,7 @@
         </div>
       </div>
     </div>
+
 
     <footer class="footer bg-[#E21F4ECC] lg:px-32 lg:py-20 px-5 pt-10 pb-3">
       <div class="footer-wrap">
