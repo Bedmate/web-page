@@ -195,7 +195,13 @@
         .team_mobile{
           display: none;
         }
-
+        footer{
+          width: 100%;
+        }
+        .footer-wrap{
+          width: 90%;
+          margin: auto;
+        }
       
       @media (max-width: 650px){
             .Join_our_Team{
@@ -282,6 +288,7 @@
         .col input{
           height: 1rem;
         }
+        
         .but{
           display: flex;
           justify-content: space-between;
@@ -295,6 +302,11 @@
         .but img{
           height: 10px;
         }
+        .footer-wrap{
+          width: 100%;
+          margin: 0 0;
+        }
+      
       }
     </style>
   </head>
@@ -1673,14 +1685,26 @@
     </div>
 
 
-    <footer class="footer bg-[#E21F4ECC] lg:px-32 lg:py-20 px-5 pt-10 pb-3">
-      <div class="footer-wrap">
+    <footer class="footer bg-[#E21F4ECC]  lg:py-20 px-5 pt-10 pb-3">
+      <div class="footer-wrap  mx-auto">
         <div
           class="footer-top flex lg:flex-row flex-col lg:items-center items-start lg:gap-48 gap-10 text-fadeWhite lg:pb-20 lg:px-1"
         >
           <div>
-            <img src="../Assets/BED-MATE.png" alt="bed-mate-logo" />
-            <ul class="mt-5 flex flex-col gap-5">
+            <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <img
+              src="../Assets/Heart.png"
+              alt="bed-mate-logo"
+              style="height: 3.3rem; padding: 0 0.6rem"
+            />
+            <img
+              src="../Assets/cumrid.png"
+              alt="bed-mate-logo"
+              style="height: 1.3rem"
+            />
+          </div>            <ul class="mt-5 flex flex-col gap-5">
               <li><a href="#" target="_blank">+234 812345678</a></li>
               <li><a href="#" target="_blank">support@BedMate</a></li>
             </ul>
@@ -1691,7 +1715,6 @@
             <ul class="mt-5 flex flex-col gap-5">
               <li><a href="index.html">Home</a></li>
               <li><a href="goal.html">Goal</a></li>
-              <li><a href="waiting-list.html">Waiting List</a></li>
             </ul>
           </div>
 
@@ -1700,7 +1723,6 @@
             <ul class="mt-5 flex flex-col gap-5">
               <li><a href="pricing.html">Pricing</a></li>
               <li><a href="contact.html">Contact US</a></li>
-              <li><a href="waiting-list.html">Waiting List</a></li>
             </ul>
           </div>
 
@@ -1724,7 +1746,6 @@
               <li><a href="career-page.html">Join Our Team</a></li>
               <li><a href="pricing.html">Pricing</a></li>
               <li><a href="contact.html">Contact US</a></li>
-              <li><a href="waiting-list.html">Waiting List</a></li>
             </ul>
           </div>
         </div>
