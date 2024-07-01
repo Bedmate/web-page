@@ -59,7 +59,7 @@ all_position.forEach((pos, i) => {
 function sliderFxn(){
 
   team_mobile.forEach((pos, i) => {
-    pos.style.transform = `translateX(${100 * (i -position)}%)`
+    pos.style.transform = `translateX(${100 * (i -position) }%)`
   })
 
 

@@ -34,11 +34,11 @@
           width: 80%;
       }
       .imageContainer{
-        width: 20%;
-        max-width: 280px;
+        width: 30%;
+        max-width: 320px;
         min-width: 220px;
         flex-shrink: 0;
-        height:250px;
+        height:270px;
         margin: 0 .3rem;
  
         
@@ -60,20 +60,21 @@
       
        .name_role{
       display: none;
+      height: 20%;
 
       }
       .name_role > a{
-        background-color: #e21f4e;
-        color: white;
         border-radius: 50%;
-        padding: .3rem .5rem;
         
+      }
+      .name_role a img{
+      object-fit: scale-down;
+      filter: contrast(100px);
       }
        
       .currentSelectedTeam{
         transform: scale(1.1);
         filter: grayscale(0);
-        box-shadow: 2px 26px 20px 1px #e21f4c37;
         z-index: 50;
      
         margin: 0 .8rem;
@@ -89,8 +90,9 @@
         
       }
       .currentSelectedTeam img{
-        border-top-left-radius: .4rem;
-        border-top-right-radius: .4rem;
+       
+        box-shadow: 2px 100px 20px 1px #e21f4c37;
+
       }
 
       .currentTeamPosition{
@@ -204,6 +206,7 @@
         }
       
       @media (max-width: 650px){
+     
             .Join_our_Team{
           width: 100%;
              }
@@ -244,6 +247,8 @@
             overflow: hidden;
             min-height: 280px;
             position: relative;
+            width: 95%;
+            margin: auto;
           }
           .team_mobile > div{
             width: 100%;
@@ -252,6 +257,8 @@
             left: 0;
             display: flex;
             transition: all 1s;
+            margin: auto;
+            
 
           }
 
@@ -268,11 +275,39 @@
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
 
+      } 
+    
+      .name_role > a img{
+        object-fit: contain;
+        
+        width: 30px;
+        height: 30px;
       }
 
       }
 
       @media (max-width: 992px) {
+        .imageContainer{
+        width: 20%;
+        max-width: 320px;
+        min-width: 150px;
+        flex-shrink: 0;
+        height:270px;
+        margin: 0 .7rem;
+ 
+        
+        /* filter: grayscale(100%); */
+        /* transition: all 1s; */
+
+      }
+     
+      .imageContainer img{
+        height: 70%;
+        width: 100%;
+        object-fit: cover;      
+     
+
+      }
         .card {
           margin: 2rem;
           padding: 0 1rem;
@@ -375,7 +410,7 @@
       </div>
     </div>
 
-    <div class="page-wrap lg:px-20 p-3 lg:py-5">
+    <div class="page-wrap   lg:py-5">
       <nav
         class="nav bg-mainPink flex items-center justify-between lg:py-5 py-3 px-8 rounded-full "
       >
@@ -461,8 +496,8 @@
         </p>
       </div>
 
-      <div style="height: auto; position: relative;    max-width: auto; align-items: center;"
-        class="deskTopTeam mx-auto w-[90%]   items-center justify-center  "
+      <div style="height: auto; position: relative;    max-width: 100%; align-items: center; "
+        class="deskTopTeam mx-auto w-[100%]   items-center justify-center  "
       >
         <div class=" flex flex-col items-center justify-center imageContainer ">
           <img
@@ -477,7 +512,7 @@
             </div>
 
             <a href="" class="   ">
-              ↗
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
         </div>
@@ -494,8 +529,8 @@
               <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
             </div>
 
-            <a href="" class="   bg-[#e21f4e]">
-              ↗
+            <a href="" class="   ">
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
         </div>
@@ -512,8 +547,8 @@
               <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
             </div>
 
-            <a href="" class="   bg-[#e21f4e]">
-              ↗
+            <a href="" class="   ">
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
         </div>
@@ -530,8 +565,8 @@
               <small class="text-[.3rem] font-extralight">Mobile App Developer</small>
             </div>
 
-            <a href="" class="   bg-[#e21f4e]">
-              ↗
+            <a href="" class="   ">
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
         </div>
@@ -554,7 +589,7 @@
             </div>
 
             <a href="" class="   ">
-              ↗
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
 
@@ -577,7 +612,7 @@
             </div>
 
             <a href="" class="   ">
-              ↗
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
 
@@ -600,7 +635,7 @@
             </div>
 
             <a href="" class="   ">
-              ↗
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
 
@@ -623,7 +658,7 @@
             </div>
 
             <a href="" class="   ">
-              ↗
+              <img src="./Assets/fluent-mdl2_go.jpg" alt="">
             </a>
           </div>
 
