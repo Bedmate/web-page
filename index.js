@@ -15,6 +15,12 @@ console.log(accBtns);
 const accBodys = document.querySelectorAll(".accordian-body");
 console.log(accBodys);
 
+// apply and form
+const applyBtn = document.querySelector(".apply");
+const applyModal = document.querySelector(".applyModal");
+const applyForm = document.querySelector(".applyModal form");
+
+
 
 // teams Image and position and slider
 const allTeamsImage = document.querySelectorAll(".imageContainer")
@@ -53,7 +59,7 @@ all_position.forEach((pos, i) => {
 function sliderFxn(){
 
   team_mobile.forEach((pos, i) => {
-    pos.style.transform = `translateX(${100 * (i -position)}%)`
+    pos.style.transform = `translateX(${100 * (i -position) }%)`
   })
 
 
@@ -238,4 +244,17 @@ function closeForm4() {
 }
 function closeForm5() {
   document.getElementById("myForm5").style.display = "none";
+}
+
+
+applyBtn.addEventListener("click", ()=>{
+  applyModal.classList.remove("none")
+})
+
+applyForm.addEventListener("submit", (e)=>{
+  e.preventDefault()
+})
+function closeForm(){
+
+  applyModal.classList.add("none")
 }

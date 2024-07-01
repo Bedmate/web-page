@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link
+      rel="shortcut icon"
+      href="../Assets/BED-MATE.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+<script defer src="index.js"></script>
+<script defer src="apply.js"></script>
+
+
+    <style>
+        body{
+
+        }
+
+        .job_details{
+          display: flex;
+          width: 90%;
+          margin:  auto;
+          justify-content: space-between;
+        }
+        .job_details >div{
+          width: 45%;
+          font-size: .85rem;
+
+        }
+        .job_details ul{
+          list-style-type: disc;
+        }
+        .job_details ul li{
+          margin: .5rem auto;
+        }
+        .job_details > div h2{
+          font-weight: bolder;
+          font-size: 1rem;
+          margin: .5rem auto;
+        }
+        
+        .job_details .job_description h2{
+          color: #e21f4e;
+          
+        }
+
+        .about_us{
+          display: flex;
+          justify-content: space-between;
+          width: 95%;
+          margin: .8rem auto;
+          font-size: .9rem;
+        }
+        .about_us > div {
+          width: 46%;
+        }
+        .about_us > div > div{
+          margin: .6rem;
+        }
+        .about_us > div > div h2{
+          margin: .4rem auto;
+          font-weight: bold;
+          font-size: 1rem;
+        }
+
+        .about_us > div:first-of-type > div:first-of-type h2{
+          color: #e21f4e;
+        }
+        .conclusion{
+          margin: 1rem auto;
+
+        }
+
+        .applyModal{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.886);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+
+        }
+        .applyModal > div {
+            width: 65%;
+            height: auto;
+            background-color: grey;
+            z-index: 100;
+            max-width: 550px;
+
+        }
+        .applyModal > div > form{
+            background-color: #e21f4e;
+            padding: 1rem;
+        }
+        .none{
+            display: none;
+        }
+
+        @media all and (max-width: 700px) {
+          
+        
+          header{
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+          .apply_now{
+            flex-direction: column;
+            align-items: center;
+          }
+          .apply_now button{
+            margin-bottom: 2rem;
+          }
+          .apply_now a {
+            width: 100%;
+          }
+          .job_details{
+            flex-direction: column;
+            width: 95%;
+            padding: .5rem;
+          }
+          .job_details >div {
+            width: 100%;
+          }
+
+          .about_us{
+            flex-direction: column;
+          }
+          .about_us > div{
+            width: 100%;
+          }
+          .about_us > div > div{
+            margin: 1.4rem auto auto auto;
+          }
+          .about_us > div > div h2{
+            margin: .6rem auto;
+          }
+          .applyModal{
+            overflow-y: scroll;
+            
+          }
+          .applyModal > div{
+            width: 100%;
+            max-width: auto;
+            height: auto;
+          }
+        
+        }
+
+
+
+
+
+
+    </style>
+
+    <title>Scrum Master</title>
+
+</head>
+<body class="contact career-page bg-[#FFFFFF] overflow-x-hidden">
+  <!-- <div class="triangle-bg1 absolute top-0 left-0">
+    <img src="./Assets/contact-tri1.svg" alt="" />
+  </div>
+  <div class="triangle-bg2 absolute top-0 right-0">
+    <img src="./Assets/contact-tri2.svg" alt="" />
+  </div> -->
+
+  <div
+    class="mobile-nav fixed top-0 left-0 right-0 h-[100vh] bg-[#E84C71]  hidden"
+  >
+    <div class="flex flex-col items-center justify-center h-full w-full">
+      <div
+        class="close-btn absolute top-5 left-5 w-[40px] h-[40px] bg-[#F4D8D6] rounded-full flex items-center justify-center"
+      >
+        X
+      </div>
+
+      <div class="nav-list">
+        <ul
+          class="text-2xl font-bold flex flex-col items-center gap-10 text-fadeWhite"
+        >
+          <li class="nav-link"><a href="index.html">HOME</a></li>
+          <li class="nav-link"><a href="goal.html">GOAL</a></li>
+          <li class="nav-link"><a href="career-page.html">JOIN US</a></li>
+          <li class="nav-link"><a href="contact.html">CONTACT US</a></li>
+          <li class="nav-link"><a href="pricing.html">PRICING</a></li>
+        </ul>
+      </div>
+
+      <div class="app-links flex flex-col-reverse items-center gap-7 mt-16">
+        <a href="#">
+          <button
+            class="flex items-center gap-2 px-3 py-[5px] border-0 bg-mainBlack text-mainWhite rounded-lg"
+          >
+            <div class="store-img-wrap">
+              <img src="../Assets/google-play-color.svg" alt="" />
+            </div>
+
+            <div>
+              <p class="text-xs">Download on the</p>
+              <h2 class="text-xl -mt-1">Google Play</h2>
+            </div>
+          </button>
+        </a>
+
+        <a href="#">
+          <button
+            class="flex items-center gap-2 px-3 py-[5px] border-0 bg-mainBlack text-mainWhite rounded-lg"
+          >
+            <div class="store-img-wrap">
+              <img src="../Assets/apple-store-logo.svg" alt="" />
+            </div>
+
+            <div>
+              <p class="text-xs">Download on the</p>
+              <h2 class="text-xl -mt-1">App Store</h2>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap lg:px-20 p-3 lg:py-5">
+    <nav
+      class="nav bg-mainPink flex items-center justify-between lg:py-5 py-3 px-8 rounded-full "
+    >
+      <div
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <img
+          src="../Assets/Heart.png"
+          alt="bed-mate-logo"
+          style="height: 3.3rem; padding: 0 0.6rem"
+        />
+        <img
+          src="../Assets/cumrid.png"
+          alt="bed-mate-logo"
+          style="height: 1.3rem"
+        />
+      </div>
+
+      <div class="nav-list">
+        <ul class="flex items-center gap-9 text-fadeWhite">
+          <li class="nav-link">
+            <a href="index.html" style="color: white">HOME</a>
+          </li>
+          <li class="nav-link">
+            <a href="goal.html" style="color: white">GOAL</a>
+          </li>
+          <li class="nav-link">
+            <a href="career-page.html" style="color: white">JOIN US</a>
+          </li>
+          <li class="nav-link">
+            <a href="contact.html" style="color: white">CONTACT US</a>
+          </li>
+          <li class="nav-link">
+            <a href="pricing.html" style="color: white">PRICING</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="app-links flex items-center gap-7">
+        <a href="#">
+          <button
+            class="flex items-center gap-2 px-3 py-[2px] border-2 border-mainWhite text-mainWhite rounded-lg"
+          >
+            <div class="store-img-wrap">
+              <img src="../Assets/google-play-logo.svg" alt="" />
+            </div>
+
+            <div>
+              <p class="text-xs">Download on the</p>
+              <h2 class="text-xl -mt-1">Google Play</h2>
+            </div>
+          </button>
+        </a>
+
+        <a href="#">
+          <button
+            class="flex items-center gap-2 px-3 py-[2px] border-2 border-mainWhite text-mainWhite rounded-lg"
+          >
+            <div class="store-img-wrap">
+              <img src="../Assets/apple-store-logo.svg" alt="" />
+            </div>
+
+            <div>
+              <p class="text-xs">Download on the</p>
+              <h2 class="text-xl -mt-1">App Store</h2>
+            </div>
+          </button>
+        </a>
+      </div>
+
+      <button class="nav-toggle">
+        <img src="../Assets/nav-toggle.svg" alt="" />
+      </button>
+    </nav>
+
+
+        <header class="w-[90%] mx-auto py-4 flex justify-between items-center">
+            <div class="">
+                <h1 style="font-weight: bolder;" class="text-2xl my-0 ">Scrum Master</h2>
+                <span class="flex text-sm mt-2">
+                    <img src="./Assets/mdi_location.png" class="w-[20px] mr-4 " alt="location pin">
+                    Remote
+                </span>
+            </div>
+
+            <div class="apply_now text-[10px]" style="font-size: 13px;">
+                <button    class="bg-mainPink p-2 mx-2 text-white rounded apply" >Apply Now!</button>
+
+                <a href="./career-page.html"  class="border-2 p-2 rounded border-black ">Back to job listing</a>
+            </div>
+        </header>
+
+
+          <section class="job_details">
+            <div class="desc_resp_req">
+              <div class="job_description">
+                <h2>Job Description:</h2>
+                <p>
+                    We are looking for a motivated and experienced Scrum Master with a minimum of one year of professional experience to join our dynamic team. The ideal candidate will have a deep understanding of Agile methodologies and a passion for facilitating team success. As a Scrum Master at CumRid, you will be responsible for guiding our teams through the Scrum process, ensuring smooth and effective delivery of projects.
+                </p>
+              </div>
+              <div class="responsibilities">
+                <h2>Responsibilities:</h2>
+                <ul>
+                  <li>Facilitate daily Scrum meetings, sprint planning, sprint reviews, and retrospectives.</li>
+                  <li>Guide and coach the Scrum team on Agile principles and Scrum practices.</li>
+                  <li>Remove impediments and shield the team from external interferences to ensure a productive work environment.</li>
+                  <li>Assist the product owner with backlog management and maintaining a well-defined product backlog.</li>
+                  <li>Ensure the team is focused on the sprint goals and delivering high-quality increments.</li>
+                  <li>Track and communicate team progress using Agile metrics and KPIs.</li>
+                  <li>Foster a collaborative and supportive team environment, encouraging continuous improvement.</li>
+                  <li>Promote a culture of accountability, transparency, and self-organization within the team.</li>
+                  <li>Coordinate with other Scrum Masters and Agile Coaches to improve overall Agile practices across the organization.</li>
+                </ul>
+                
+              </div>
+             
+            </div>
+            <!--  -->
+
+            <div class="bonus_whyJoinUs">
+                <div class="requirements">
+                    <h2>Requirements:</h2>
+                    <ul>
+                      <li>Bachelor’s degree in Computer Science, Engineering, Business, or related field.</li>
+                      <li>Minimum of one year of professional experience as a Scrum Master or in a similar role.</li>
+                      <li>Strong understanding of Agile principles and Scrum framework.</li>
+                      <li>Excellent facilitation, coaching, and communication skills.</li>
+                      <li>Ability to manage conflicts and resolve issues effectively.</li>
+                      <li>Proficiency with Agile project management tools (e.g., Jira, Trello, Asana).</li>
+                      <li>Strong organizational and time management skills.</li>
+                      <li>Certification in Scrum (e.g., Certified ScrumMaster (CSM), Professional Scrum Master (PSM)) is preferred.</li>
+                      <li>Experience working in an Agile environment within [specific industry or sector] is a plus.</li>
+                    </ul>
+                  </div>
+              <div class="whyJoinUs">
+                <h2>Why Join Us:</h2>
+                <ul>
+                  <li>Opportunity to work on exciting projects for a diverse range of clients.</li>
+                  <li>Collaborative and supportive team environment.</li>
+                  <li>Competitive salary and benefits package.</li>
+                  <li>Professional development opportunities and ongoing training.</li>
+                </ul>
+              </div>
+              <p class="conclusion">
+                If you are passionate about Social Media Management and eager to take your career to the next level, we want to hear from you! Please submit your resume and portfolio showcasing your best work
+              </p>
+            </div>
+
+           
+          </section>
+
+
+
+
+          <div class="about_us">
+            <div class="about_left">
+
+            <div>
+              <h2>About Us:</h2>
+              <p>At Cumrid, we believe that love knows no bounds. We're not just another dating platform; we're a vibrant community where connections flourish and relationships blossom. Our mission is simple: to bring people together, no matter where they are, and ignite the sparks of romance.</p>
+            </div>
+          
+            <div>
+              <h2>What Sets Us Apart:</h2>
+              <p>Innovative Features: Cumrid isn't just about swiping left or right. We're all about meaningful connections. Our platform is packed with innovative features designed to keep engagement high and sparks flying. From interactive games to personality quizzes, we provide endless opportunities for our members to connect on a deeper level.</p>
+            </div>
+          
+            <div>
+              <h2>Location-Based Matching:</h2>
+              <p>We understand that proximity plays a crucial role in forming lasting connections. That's why Cumrid utilizes cutting-edge location-based technology to connect lovers who are nearby. Whether you're looking for someone in your neighborhood or planning a romantic rendezvous while traveling, Cumrid makes it easy to find your perfect match.</p>
+            </div>
+          
+          </div>
+
+<div class="about_right">
+
+            <div>
+              <h2>Community-Centric Approach:</h2>
+              <p>At Cumrid, we're more than just a dating platform; we're a supportive community. Our members are at the heart of everything we do, and we're dedicated to creating a safe and inclusive space where everyone feels welcome. Whether you're new to the dating scene or a seasoned pro, you'll find a warm and inviting atmosphere at Cumrid.</p>
+            </div>
+          
+            <div>
+              <h2>Why Choose Cumrid:</h2>
+              <p>Endless Possibilities: With Cumrid, the possibilities are endless. Whether you're searching for your soulmate or simply looking to expand your social circle, Cumrid offers a myriad of opportunities to connect with like-minded individuals who share your interests and passions.</p>
+            </div>
+          
+            <div>
+              <h2>Real Connections, Real People:</h2>
+              <p>We believe that behind every profile is a real person with a unique story to tell. At Cumrid, authenticity is key, and we're committed to fostering genuine connections between real people. Say goodbye to catfishing and fake profiles – at Cumrid, you'll only find genuine, authentic connections.</p>
+            </div>
+
+</div>
+
+          </div>
+
+
+
+
+        <!--  -->
+  
+        <div class="applyModal none">
+            <div class=" ">
+                <form action="">
+                    <div style="display: flex; justify-content: end; padding: 1rem;">
+                      <button
+                        onclick="closeForm()"
+                        style="
+                          height: 1.5rem;
+                          width: 1.5rem;
+                          border-radius: 1rem;
+                          background-color: black;
+                          opacity: 50%;
+                          font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                            'Trebuchet MS', sans-serif;
+                          font-weight: 700;
+                          color: white;
+                        "
+                        class="close"
+                      >
+                        X
+                      </button>
+                    </div>
+                    <div class="row" style="padding: 1rem 0">
+                      <div class="col">
+                        <label
+                          for=""
+                          style="
+                            padding: 0.7rem 0;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: white;
+                          "
+                          >your name*</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          aria-label="Name"
+                          required
+                          style="
+                            height: 3.3rem;
+                            background-color: rgba(255, 255, 255, 0.11);
+                            border: 1px solid #e21f4e;
+                            color: black;
+                          "
+                        />
+                      </div>
+                      <div class="col">
+                        <label
+                          for=""
+                          style="
+                            padding: 0.7rem 0;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: white;
+                          "
+                          >Email*</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          aria-label="Email"
+                          required
+                          style="
+                            height: 3.3rem;
+                            background-color: rgba(255, 255, 255, 0.11);
+                            border: 1px solid #e21f4e;
+                            color: black;
+                          "
+                        />
+                      </div>
+                    </div>
+                    <div class="row" style="padding: 1rem 0">
+                      <div class="col">
+                        <label
+                          for=""
+                          style="
+                            padding: 0.7rem 0;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: white;
+                          "
+                          >Phone number*</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          aria-label="Phone number"
+                          required
+                          style="
+                            height: 3.3rem;
+                            background-color: rgba(255, 255, 255, 0.11);
+                            border: 1px solid #e21f4e;
+                            color: black;
+                          "
+                        />
+                      </div>
+                      <div class="col">
+                        <label
+                          for="file-upload"
+                          style="
+                            padding: 0.7rem 0;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: white;
+                          "
+                          >Upload Cv*</label
+                        >
+                        <input
+                          type="file"
+                          class="form-control py-3 px-1"
+                          id="file-upload"
+                          required
+                          style="
+                            height: 3.3rem;
+                            background-color: rgba(255, 255, 255, 0.11);
+                            border: 1px solid #e21f4e;
+                            color: black;
+                          "
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label
+                        for=""
+                        style="
+                          padding: 0.7rem 0;
+                          text-transform: uppercase;
+                          font-weight: bold;
+                          color: white;
+                        "
+                        >Tell us about yourself</label
+                      >
+                      <textarea
+                        name=""
+                        id=""
+                        rows="8"
+                        class="form-control"
+                        style="
+                          background-color: rgba(255, 255, 255, 0.11);
+                          border: 1px solid #e21f4e;
+                          color: black;
+                        "
+                      ></textarea>
+                    </div>
+                    <center class="sign">
+                      <button
+                        style="
+                          background-color: white;
+                          margin-top: 3rem;
+                          opacity: 70%;
+                          cursor: pointer;
+                          height: 3rem;
+                          width: 70%;
+                          border: 1px solid #e21f4e;
+                          border-radius: 3rem;
+                          color: black;
+                          font-weight: bolder;
+                          font-size: large;
+                        "
+                      >
+                        Submit
+                      </button>
+                    </center>
+                  </form>
+
+            </div>
+
+        </div>
+    
+    
+
+
+ <!-- Not sure why removing this affects the moile nav, so i left it here but hid it instead -->
+    <div style="display: none;" class="d-flex justify-content-between mx-auto text-light w-75  align-items-center ">
+
+        <button style="display: none;"  class="p-3 bg-dark rounded-circle prev_pos">←</button>
+       
+        <button style="display: none;" class="p-3 bg-dark rounded-circle next_pos">→</button>
+  
+      </div>
+  </div>
+  <!--  -->
+
+
+  <footer class="footer bg-[#E21F4ECC]  lg:py-20 px-5 pt-10 pb-3">
+    <div class="footer-wrap  mx-auto">
+      <div
+        class="footer-top flex lg:flex-row flex-col lg:items-center items-start lg:gap-48 gap-10 text-fadeWhite lg:pb-20 lg:px-1"
+      >
+        <div>
+          <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            src="../Assets/Heart.png"
+            alt="bed-mate-logo"
+            style="height: 3.3rem; padding: 0 0.6rem"
+          />
+          <img
+            src="../Assets/cumrid.png"
+            alt="bed-mate-logo"
+            style="height: 1.3rem"
+          />
+        </div>            <ul class="mt-5 flex flex-col gap-5">
+            <li><a href="#" target="_blank">+234 812345678</a></li>
+            <li><a href="#" target="_blank">support@BedMate</a></li>
+          </ul>
+        </div>
+
+        <div class="quick-links">
+          <h3 class="text-lg">Quick Links</h3>
+          <ul class="mt-5 flex flex-col gap-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="goal.html">Goal</a></li>
+          </ul>
+        </div>
+
+        <div class="quick-links">
+          <h3 class="text-lg text-[#E21F4ECC]">Quick Links</h3>
+          <ul class="mt-5 flex flex-col gap-5">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact US</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg">Subscribe</h3>
+          <div class="input-wrap flex items-center mt-5">
+            <input
+              type="text"
+              placeholder="Get product updates"
+              class="bg-mainWhite p-3 text-[#0A142F] text-xs rounded-l-lg"
+            />
+            <button class="py-2 px-3 bg-mainPink rounded-r-lg">&rarr;</button>
+          </div>
+        </div>
+
+        <div class="quick-links-mobile">
+          <h3 class="text-lg">Quick Links</h3>
+          <ul class="mt-5 flex flex-col gap-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="goal.html">Goal</a></li>
+            <li><a href="career-page.html">Join Our Team</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact US</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="footer-down pt-8 flex lg:flex-row flex-col gap-5 items-center justify-between"
+      >
+        <div class="social-links flex items-center gap-5">
+          <a href="#">
+            <div
+              class="w-[40px] h-[40px] rounded-full flex items-center justify-center"
+            >
+              <img src="../Assets/linkedin-icon.svg" alt="linkedin icon" />
+            </div>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61551119541795&mibextid=D4KYlr"
+            target="_blank"
+          >
+            <div
+              class="w-[40px] h-[40px] rounded-full flex items-center justify-center"
+            >
+              <img src="../Assets/facebook-icon.svg" alt="facebook icon" />
+            </div>
+          </a>
+
+          <a
+            href="https://twitter.com/officialcumrid?t=vQncJvaauS1xMOsSN9gj_g&s=09"
+            target="_blank"
+          >
+            <div
+              class="w-[40px] h-[40px] rounded-full flex items-center justify-center"
+            >
+              <img src="../Assets/twitter-icon.svg" alt="twitter icon" />
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#"
+            ><img src="../Assets/BED-MATE.png" alt="bed-mate-logo"
+          /></a>
+        </div>
+
+        <div>
+          <p class="lg:text-base text-xs">
+            &copy; 2023. <a href="#">BedMate.</a> All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>
